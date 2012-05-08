@@ -43,29 +43,29 @@ class Contact {
     }
 
     function insert($lang) {
-        global $dbname, $columnList;
-        $query = "INSERT INTO `".$dbname."_".$lang."` (".$columnList.") VALUES (".getValueList().")";
+        global $tablename, $columnList;
+        $query = "INSERT INTO `".$tablename."_".$lang."` (".$columnList.") VALUES (".getValueList().")";
         mysql_query($query);
     }
     
     function update($lang) {
-        global $dbname;
-        $query = "UPDATE `".$dbname."_".$lang."` ".getKeyValueList();
+        global $tablename;
+        $query = "UPDATE `".$tablename."_".$lang."` ".getKeyValueList();
         mysql_query($query);
     }
 }
 
 function ContactUpdate($contact_language1, $contact_language2) {
-    global $dbname, $langColumnList, $langColumns, $otherColumns, $columns;
-    $query = "SELECT ".$langColumnList." FROM `".$dbname."` WHERE `id`='".$contact_language1->m[0]."'";
+    global $tablename, $langColumnList, $langColumns, $otherColumns, $columns;
+    $query = "SELECT ".$langColumnList." FROM `".$tablename."` WHERE `id`='".$contact_language1->m[0]."'";
     $result = mysql_query($query);
     for ($i = 0; $i < count($langColumns); $i++) {
         if (empty($contact_language2->m[$langColumns[$i]])) {
             $contact_language2->m[$langColumns[$i]] = $contact_language1->m[$langColumns[$i]];
         }
-        mysql_query("UPDATE `".$dbname."_lang` SET `language1`=\"".$contact_language1->m[$langColumns[$i]]."\", `language2`=\"".$contact_language2->m[$langColumns[$i]]."\" WHERE `id`='".mysql_result($result,0,$i)."'");
+        mysql_query("UPDATE `".$tablename."_lang` SET `language1`=\"".$contact_language1->m[$langColumns[$i]]."\", `language2`=\"".$contact_language2->m[$langColumns[$i]]."\" WHERE `id`='".mysql_result($result,0,$i)."'");
     }
-    $query = "UPDATE `".$dbname."` SET ";
+    $query = "UPDATE `".$tablename."` SET ";
     for ($i = 1; $i < count($otherColumns); $i++) {
         $query .= "`".$columns[$otherColumns[$i]]."`='".$contact_language1->m[$otherColumns[$i]]."',";
     }
@@ -111,8 +111,8 @@ function ContactCreateFromPost($lang) {
 }
 
 function ContactGet($lang, $id) {
-    global $dbname;
-    $result = mysql_query("SELECT * FROM `".$dbname."_".$lang."` WHERE `id`='$id'");
+    global $tablename;
+    $result = mysql_query("SELECT * FROM `".$tablename."_".$lang."` WHERE `id`='$id'");
     return ContactFillAll($result,0);
 }
 
@@ -192,31 +192,31 @@ function prepareForSql($text) {
 
 //////////////////////////////////////////////////// QUERIES
 function insertLanguageItemQuery($language1, $language2) {
-    global $dbname;
-    $query = "SELECT MAX(id) FROM `".$dbname."_lang`";
+    global $tablename;
+    $query = "SELECT MAX(id) FROM `".$tablename."_lang`";
     $result = mysql_query($query);
     $newindex = mysql_result($result,0,0) + 1;
     if (empty($language2)) {
         $language2 = $language1;
     }
-    $query = "INSERT INTO `".$dbname."_lang` (`id`, `language1`, `language2`) VALUES ('$newindex', \"$language1\", \"$language2\")";
+    $query = "INSERT INTO `".$tablename."_lang` (`id`, `language1`, `language2`) VALUES ('$newindex', \"$language1\", \"$language2\")";
     mysql_query($query);
     return $newindex;
 }
 
 function createJoinQuery($lang) {
-    global $dbname, $columns, $langColumns, $otherColumns;
+    global $tablename, $columns, $langColumns, $otherColumns;
     $query = "SELECT Main.id, ";
     $joinpart = "";
     for ($i = 0; $i < count($langColumns); $i++) {
         $name = $columns[$langColumns[$i]];
         $query = $query."L".$name.".".$lang." AS ".$name.",";
-        $joinpart = $joinpart."JOIN `".$dbname."_lang` `L".$name."` ON L".$name.".id = `".$name."`\n";
+        $joinpart = $joinpart."JOIN `".$tablename."_lang` `L".$name."` ON L".$name.".id = `".$name."`\n";
     }
     for ($i = 1; $i < count($otherColumns); $i++) {
         $query = $query."`".$columns[$otherColumns[$i]]."`,";
     }
-    $query = substr($query,0,strlen($query)-1)."\nFROM `".$dbname."` `Main`\n".$joinpart;
+    $query = substr($query,0,strlen($query)-1)."\nFROM `".$tablename."` `Main`\n".$joinpart;
     return $query;
 }
 
@@ -280,13 +280,13 @@ function createOriginalTable () {
 }
 
 function createTableForLanguage($lang) {
-    global $dbname,$columns,$columntypes;
+    global $tablename,$columns,$columntypes;
     if (strlen($lang) > 0) {
         $lang = "_".$lang;
     }
-    $query = "DROP TABLE `".$dbname.$lang."`";
+    $query = "DROP TABLE `".$tablename.$lang."`";
     mysql_query($query);
-    $query = "CREATE TABLE `".$dbname.$lang."` (";
+    $query = "CREATE TABLE `".$tablename.$lang."` (";
     for ($i = 0; $i < count($columns); $i++) {
         $query = $query."`".$columns[$i]."` ".$columntypes[$i].",\n";
     }
@@ -295,10 +295,10 @@ function createTableForLanguage($lang) {
 }
 
 function createLanguageTable() {
-    global $dbname;
-    $query="DROP TABLE `".$dbname."_lang`";
+    global $tablename;
+    $query="DROP TABLE `".$tablename."_lang`";
     mysql_query($query);
-    $query="CREATE TABLE `".$dbname."_lang` (
+    $query="CREATE TABLE `".$tablename."_lang` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
     `language1` text NOT NULL,
     `language2` text NOT NULL,

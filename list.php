@@ -2,13 +2,14 @@
 include_once("protected/mysql.inc");
 include_once("commonstuff.php");
 $searchcriteria = SearchCriteriaCreateFromPost();
-$lang = getGet("lang",getPost("lang","deu"));
+$lang = getGet("lang",getPost("lang","language1"));
 include("top.php");
 
 //echo("start ".microtime_float()."<br/>");
 //$starttime = microtime_float();
 
 $query = createQuery($lang,$searchcriteria->group, $searchcriteria->location, $searchcriteria->media, $searchcriteria->searchterm, "true");
+echo $query;
 $result = mysql_query($query);
 $num = mysql_numrows($result);
 include("form.php");

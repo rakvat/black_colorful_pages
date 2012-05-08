@@ -1,5 +1,7 @@
 *~
 *.swp
+*.swo
 locale.php
 protected/mysql.inc
 .htaccess
+deploy.sh

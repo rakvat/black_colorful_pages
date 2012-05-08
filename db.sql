@@ -12,7 +12,7 @@ CREATE TABLE `contacts` (
   `location` tinyint(1) default NULL,
   `media` tinyint(1) default NULL,
   `e_mail` text,
-  `geo_coordinats` varchar(16) default NULL,
+  `geo_coordinates` varchar(16) default NULL,
   `image_or_logo` text,
   `state` text NOT NULL,
   `released` tinyint(1) NOT NULL default '0',

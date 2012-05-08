@@ -9,8 +9,10 @@ include("top.php");
 //$starttime = microtime_float();
 
 $query = createQuery($lang,$searchcriteria->group, $searchcriteria->location, $searchcriteria->media, $searchcriteria->searchterm, "true");
-echo $query;
+//echo $query;
 $result = mysql_query($query);
+//echo "<br/>".mysql_error();
+
 $num = mysql_numrows($result);
 include("form.php");
 

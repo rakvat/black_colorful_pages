@@ -2,8 +2,8 @@
 $host = "www.example.com";
 $user = "example_user";
 $pass = "example_password";
+$dz = mysql_connect($host, $user, $pass) or die("unable to connect to mysql server");
 $database = "example_database_name";
-$dz = mysql_connect($host, $user, $pass);
-mysql_select_db($database,$dz);
+mysql_select_db($database,$dz) or die("unable to select db " . $database);
 $tablename = "contacts";  //language table should be named <$tablename>_lang
 ?>

@@ -210,8 +210,8 @@ function createJoinQuery($lang) {
     $joinpart = "";
     for ($i = 0; $i < count($langColumns); $i++) {
         $name = $columns[$langColumns[$i]];
-        $query = $query."L".$name.".".$lang." AS ".$name.",";
-        $joinpart = $joinpart."JOIN `".$tablename."_lang` `L".$name."` ON L".$name.".id = `".$name."`\n";
+        $query = $query."a_".$name.".".$lang." AS ".$name.",";
+        $joinpart = $joinpart."JOIN `".$tablename."_lang` `a_".$name."` ON a_".$name.".id = `".$name."`\n";
     }
     for ($i = 1; $i < count($otherColumns); $i++) {
         $query = $query."`".$columns[$otherColumns[$i]]."`,";
@@ -239,7 +239,7 @@ function createBasicQuery($lang, $group, $location, $media, $searchterm, $releas
     }
     if (strlen($searchterm) > 0) {
         $like = " LIKE \"%".$searchterm."%\"";
-        $where = $where.(strlen($where)>7?" AND ":"")."(a_name.".$lang.$like." OR a_description.".$lang.$like." OR a_short_descrition.".$lang.$like." OR a_resources.".$lang.$like." OR a_addresses.".$lang.$like." OR a_contact.".$lang.$like.")";
+        $where = $where.(strlen($where)>7?" AND ":"")."(a_name.".$lang.$like." OR a_description.".$lang.$like." OR a_short_description.".$lang.$like." OR a_resources.".$lang.$like." OR a_addresses.".$lang.$like." OR a_contact.".$lang.$like.")";
     }
     $query = $query.(strlen($where)>7?$where:"");
     return $query;

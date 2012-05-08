@@ -15,12 +15,15 @@ PHP and SQL-Database
 Installation
 -------------
 1) create the database with db.sql
-2) configurate
+2) fill it with example data (example_contacts.sql) if you like
+3) configurate
+    - cp protected/mysql.inc_template protected/mysql.inc and edit mysql.inc 
+    - cp locale.php_template locale.php and edit the texts as you need
     - replace TEX/header.png and TEX/imprint.png with your logo and address
-    - edit protected/mysql.inc and create .htaccess file for "protected"-folder (only admin should have password)
-    - cp locale.php_template to locale.php and edit the texts as you need
-3) create .htaccess file for the "organize"-folder (only content editors should have password)
-4) copy all files but mysql.inc to webserver
+4) copy all files to webserver (e.g. using scp)
+5) protect
+    - create .htaccess file for "protected"-folder (only admin should have password)
+    - create .htaccess file for the "organize"-folder (only content editors should have password)
 
 
 Usage

@@ -1,0 +1,121 @@
+<?php
+$default_language = "de"
+$l_language_id = array("language1" => "de",
+                       "language2" => "en");
+$l_description = array("language1" => "Beschreibung", 
+                       "language2" => "Description");
+$l_ressources = array("language1" => "Ressourcen", 
+                      "language2" => "Ressources");
+$l_addresses = array("language1" => "Adressen", 
+                     "language2" => "Addresses");
+$l_contact = array("language1" => "Kontakt", 
+                   "language2" => "Contact");
+$l_group = array("language1" => "Gruppe", 
+                 "language2" => "Group");
+$l_location = array("language1" => "Ort", 
+                    "language2" => "Location");
+$l_media = array("language1" => "Medien", 
+                 "language2" => "Media");
+$l_searchterm = array("language1" => "Suchbegriff", 
+                      "language2" => "Searchterm");
+$l_search = array("language1" => "suchen", 
+                  "language2" => "search");
+$l_reset = array("language1" => "zur&uuml;cksetzen", 
+                 "language2" => "reset");
+$l_structure = array("language1" => "Struktur", 
+                     "language2" => "Structure");
+$l_structures = array("language1" => "Strukturen", 
+                      "language2" => "Structures");
+$l_author = array("language1" => "Projektgruppe Schwarz-Bunte Seiten",
+                  "language2" => "Project group Black-Colorful Pages");
+$l_html_description = array("language1" => "Kontaktadressen",
+                            "language2" => "Addresses");
+$l_html_keywords = array("language1" => "Berlin, Vernetzung, Adressen, Kontaktdaten, E-Mail, Links, Telefon, Beschreibung",
+                         "language2" => "Berlin, networking, addresses, contact data, e-mail, links, phone, description");
+$l_title = array("language1" => "Schwarz-Bunte Seiten - Linksradikale und emanzipatorische Adressen in Berlin", 
+                 "language2" => "Black-Colorful Pages - Left radical and emancipatory addresses in Berlin");
+
+$l_imprint = array("language1" => "
+<br/><br/>F&uuml;r die Inhalte der verlinkten Seiten sind die Seiten selbst verantwortlich.
+<br/><br/>
+<small><i>gesetzlich vorgeschriebene \"Anbieterkennzeichnung\":</i><br/>
+</small>", 
+                   "language2" => "
+<br/><br/>content of linked pages is in the responsibility of these pages
+<br/><br/>
+<small><i>impressum, needed by law:</i><br/>
+</small>");
+
+$l_index_header = array("language1" => "
+<h2>Willkommen auf den schwarz-bunten Seiten Berlin, <br/>eurem Pool f&uuml;r linksradikale und emanzipatorische Adressen!</h2> <a href=\"index.php?lang=language2\">english</a><br/><br/>", 
+                        "language2" => "
+<h2>Welcome to the black-colorful pages Berlin, <br/>your pool for left-radical and emancipatory addresses!</h2> <a href=\"index.php?lang=language1\">deutsch</a><br/><br/> ");
+
+$l_index = array("language1" => "
+<h3>Was ihr hier findet</h3>
+Unsere Motivation f&uuml;r dieses Projekt ist es, all jenen Menschen in Berlin, die sich aktiv und emanzipatorisch in die Gesellschaft einbringen m&ouml;chten, eine Anlaufstelle zu bieten. Hier k&ouml;nnen sie sich &uuml;ber bereits bestehende Projekte informieren und diese ggf. auch gleich direkt kontaktieren. Angesprochen werden sollen Menschen, die gerade neu in Berlin sind oder schon lange hier wohnen, denen aber bislang im un&uuml;berschaubaren Wust an Gruppen und Projekten in Berlin der Ein- und &Uuml;berblick fehlte.  <br/>
+<br/>
+Dar&uuml;ber hinaus wollen wir anderen Gruppen und Einzelpersonen eine Hilfe dabei geben, Ressourcen besser gemeinsam zu nutzen, indem an einer Stelle zentral gesammelt wird, was einzelne Gruppen und Projekte zu bieten haben.<br/>
+<ul>
+<li><i>Ihr sucht einen Raum f&uuml;r eine Veranstaltung?</i> <a href=\"liste.php?lang=language1&suchbegriff=A17\">Suche:</a> Der A17-Laden bietet R&auml;ume daf&uuml;r.</li>
+<li><i>Ihr sucht ein bestimmtes anarchistisches Buch, die Autorin f&auml;llt euch aber nicht ein?</i> <a href=\"liste.php?lang=language1&suchbegriff=Bibliothek%20der%20Freien\">Suche:</a> Die Bibliothek der Freien kann euch kompetent beraten.</li> 
+<li><i>Ihr m&ouml;chtet eine politische Party machen, k&ouml;nnt selbst aber nicht kochen?</i> <a href=\"liste.php?lang=language1&suchbegriff=Food%20for%20Action\">Suche:</a> Food for Action findet eure Idee vielleicht toll und erkl&auml;rt sich bereit, die Koch-Action f&uuml;r euch zu &uuml;bernehmen.</li>
+</ul>
+Kurz gefasst findet ihr hier eine m&ouml;glichst vielseitige Sammlung, um viele verschiedene Str&ouml;mungen zu integrieren – mit einem Fokus auf Strukturen, die f&uuml;r Neue interessant sind und eher auf Dauer angelegt sind. Dazu geh&ouml;ren unter Anderem: politische Gruppen, Projekte aus dem Bereich Antip&auml;dagogik (Kinderl&auml;den), Antifa/Antira, Queeres, k&uuml;nstlerische Ans&auml;tze, Bibliotheken, Volxk&uuml;chen (Vok&uuml;s), Kollektive, Medienprojekte, Veranstaltungsorte, Infoshops, Jugendzentren, Verlage, Nachrichtenagenturen, Archive usw. usf.<br/>
+<br/>
+Wenn ihr auf den Link klickt, kommt ihr zu einer Liste, in der zun&auml;chst alle Gruppen und Projekte alphabetisch sortiert und in einer Kurzansicht zu sehen sind. Die Kurzansicht bietet euch eine schnelle Orientierung mit dem Gruppennamen, einer Kurzbeschreibung und dem jeweiligen Stadtteil. Bei jedem Projekt findet ihr rechts unten einen Pfeil, der euch zur Langansicht f&uuml;hrt. Dort findet ihr eine Langbeschreibung, Bilder bzw. Logos, Informationen zu &Ouml;ffnungszeiten, Kontaktm&ouml;glichkeiten sowie (bei den meisten Projekten) direkt eine interaktive Stadtkarte, damit ihr das gesuchte Projekt sofort lokalisieren k&ouml;nnt.
+
+<h3> Was ihr hier nicht findet:</h3>
+Es versteht sich von selbst (oder sollte es jedenfalls), dass wir hier keine Gruppen haben m&ouml;chten, die rassistisches, sexistisches und antisemitisches Gedankentum oder andere Formen der Diskriminierung f&ouml;rdern.<br/>
+<br/>
+Weil f&uuml;r uns Emanzipation sowohl mit der &Uuml;berwindung aktueller Ungerechtigkeiten, insbesondere des wirtschaftlichen und politischen Systems der so genannten \"sozialen Marktwirtschaft\", als auch mit dem kritischen Hinterfragen eigener Ideen und Vorstellungen zu tun hat, haben wir bewusst auf zwei Arten von Gruppen und Projekten verzichtet:<br/> 
+<br/>
+Zum einen sind das Gruppen, die von sich aus kein Interesse an einer grundlegenden &Auml;nderung der Gesellschaft haben bzw. deren Arbeit eine Festigung bestehender Verh&auml;ltnisse bewirkt. Dazu z&auml;hlen bspw. Parteien oder auch Wohlfahrtsorganisationen, die mit ihrer Arbeit dazu beitragen, dass die Bev&ouml;lkerung statt sich aufzulehnen und sich f&uuml;r ihre eigenen Belange einzusetzen, sich einrichtet, apathisch wird oder sinnlos einer sprichw&ouml;rtlichen M&ouml;hre hinterherl&auml;uft, die in Wirklichkeit nicht das Ziel hat, dass alle in der Gesellschaft endlich ein menschenw&uuml;rdiges Leben f&uuml;hren k&ouml;nnen.<br/> 
+<br/>
+Zum anderen sind das Gruppen, die Ideen und Regime hochhalten, die sich durch autorit&auml;re und unterdr&uuml;ckerische Ideologien auszeichnen. Dazu z&auml;hlen wir auch Staaten wie die Sowjetunion, Nordkorea oder Kuba.
+
+<h3>Was ihr tun k&ouml;nnt:</h3>
+Werdet aktiv! Das ist f&uuml;r uns das Wichtigste. Wir leben nur einmal und es gibt keine Zeit, die besser geeignet w&auml;re als jetzt.<br/>
+<br/>
+Was unser Adressprojekt angeht: 
+Wir wissen, dass es unm&ouml;glich ist, die linksradikale und emanzipatorische Szene katalogisieren zu wollen. Der Versuch w&auml;re eine Anma&szlig;ung. Die linksradikale Szene, besonders der antiautorit&auml;re Bereich, besteht aus unz&auml;hligen (also nicht z&auml;hlbaren) Gruppen. Gruppen entstehen, l&ouml;sen sich wieder auf, schlie&szlig;en sich zusammen, spalten sich ab, &auml;ndern ihre Namen, arbeiten nur tempor&auml;r an einem Projekt oder einem j&auml;hrlichen Ereignis, kooperieren mit anderen Gruppen, vernetzen sich, entwickeln sich weiter. Bewegung eben. Und weil sich so viel bewegt sind die Informationen dazu verurteilt, veraltet zu sein. <br/>
+Wir sind daher von eurer Unterst&uuml;tzung abh&auml;ngig, damit die Infos m&ouml;glichst aktuell sind. Dar&uuml;ber hinaus k&ouml;nnt ihr auch auf andere Weisen zu unserem Kontakt-Pool beitragen. Wer Texte schreiben will, bittesch&ouml;n, immer gerne. Ihr kennt ein Projekt, das noch unbedingt hier rein sollte? Her mit den Infos. Schreibt uns bitte an <b>info \-at-\ schwarz-bunte-seiten-berlin.org.</b><br/>
+<br/><br/>
+<i><b>Euer Projekt Schwarz-Bunte Seiten Berlin</b></i><br/><br/>
+", 
+    
+        "language2" => "
+<h3>“Schwarz Bunte Seiten Berlin” will offer ...</h3>
+... a platform for those actively fighting for the emancipation of society. Here you can find information on projects in Berlin and, if you want, a way of directly contacting them. This website is for people new to Berlin and for those who have already been living here for some time but have not yet got a handle on the large number of groups and projects here.<br/>
+<br/>
+We also want to offer groups and individuals an easier way of sharing resources by centralising information on what individual groups and projects are doing. <br/>
+<br/>
+How does the search function work? 
+<ul>
+<li><i>Let’s say you need a space to organise an event.</i> <a href=\"liste.php?lang=language1&suchbegriff=A17\">A search</a> on our website will tell you that the A-17 infoshop has one you could use. </li>
+<li><i>Or if you are searching for a certain anarchist book but don’t remember who wrote it,</i> then <a href=\"liste.php?lang=language1&suchbegriff=Bibliothek%20der%20Freien\">the search</a> will tell you that the easiest way would probably be to contact the team from the library Bibliothek der Freien.</li>
+<li><i>Or you want to organise a party for a political cause, but you’re no use at cooking.</i> Then you could <a href=\"liste.php?lang=language1&suchbegriff=Food%20for%20Action\">contact</a> Food for Action and if they like your idea, they might do the cooking for you. </li>
+</ul>
+You will find a very broad set of links here. This way we hope to bring together a large number of political currents. Our focus will be on groups potentially interesting to people new in Berlin, that is, groups that are likely to be around for some time. These can be political groups, anti-education groups (Kinderläden), antifascist and antiracist groups, queer organisations, activist artists, libraries, popular kitchens (Voküs), collectives, media projects, spaces for events, infoshops, youth centres, editors, news agencies, archives and so on.<br/>
+<br/>
+If you click on the link below an alphabetic list of all the groups and projects will appear, along with some basic information. This information contains the group’s name, a brief description, and where they are in Berlin. An arrow at the bottom right-hand side of each project description leads you to a more detailed description. Here you can find photos or logos, opening hours, contact options and (at least for most of the projects) an interactive map showing you where you can find the project that interests you.<br/>
+<h3>Things you will not find on this website:</h3>
+We of course (as should be clear) do not feature groups that promote racist, sexist or anti-Semitic ideas or in any other way uphold ideas that discriminate against others on our website.<br/>
+<br/>
+We believe that only by overcoming the so-called “social market economy,” that is, the current unjust economic and political system, can emancipation be achieved. At the same time we must never forget to critically question our own ideas and beliefs. That is why we will exclude two further types of groups and projects.<br/>
+<br/>
+The first of these are groups either with no interest in fundamentally changing society, or whose work helps perpetuate the status quo. Among these we count political parties and welfare organisations. Their work stops people from rebelling and fighting for their needs and helps them accept the current state of affairs, leading to apathy, or chasing after a carrot, with nice slogans which in reality have nothing to do with everyone being able to live a life worthy of the name ‘human.’<br/>
+<br/>
+On the other hand we have also decided to exclude groups supportive of ideas and regimes with authoritarian and repressive ideologies. For us this also includes the former Soviet Union, North Korea and Cuba.<br/>
+<h3>Get active!</h3>
+That’s what we want. We only have one life and there will never be a better time to use it than now. <br/>
+<br/>
+We are aware that it is impossible to turn our set of addresses into a catalogue of the radical left and emancipation-oriented movements. To try that would be arrogant. The radical left and especially the antiauthoritarian part of the movement is made up of innumerable groups. Groups are formed, dissolved, they unite with other groups, become divided, change their names, temporarily unite their forces for a determined project or a yearly event, cooperate with other groups, network and evolve. Movement, in other words. But if everything constantly changes, then the information on our website is bound to get out of date. <br/>
+That is where you come in. We need your help to constantly update the information on this website. If you feel like it, there are also other ways you can contribute to our pool of links. Want to write a text? Go ahead! Or maybe you know a project that that you can’t find here – write us an email. Feel free to contact us at <b>info/at/Schwarz-bunte-seiten-berlin.org.</b><br/>
+<br/>
+<i><b>The Schwarz-Bunte-Seiten team Berlin</b></i><br/><br/>"
+);
+$l_enter = array("language1" => "Zu den Adressen", "language2" => "Search the database");
+
+
+?>

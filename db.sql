@@ -8,7 +8,7 @@ CREATE TABLE `contacts` (
   `base_address` int(8),
   `addresses` int(8),
   `contact` int(8),
-  `gruppe` tinyint(1) default NULL,
+  `group` tinyint(1) default NULL,
   `location` tinyint(1) default NULL,
   `media` tinyint(1) default NULL,
   `e_mail` text,

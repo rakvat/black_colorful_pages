@@ -1,15 +1,20 @@
-It is distributed under GPL.
+black_colorful_pages
+--------------------
+This project is for viewing and administrating yellow-pages – contact information about your local community.
+
+This software is distributed under GPL.
 
 This code was developed for http://www.schwarz-bunte-seiten-berlin.org/
 "Schwarz-Bunte-Seiten-Berlin" is a project done by a group of the Anarchist Federation of Berlin http://afb.blogsport.de/
 
-You are welcome use this in your Federation/region and to contribute.
+You are welcome to use this in your Federation/region and to contribute.
 
 
 
 System requirements
 --------------------
 PHP and SQL-Database
+
 
 
 Installation
@@ -26,6 +31,7 @@ Installation
     - create .htaccess file for the "organize"-folder (only content editors should have password)
 
 
+
 Usage
 -----
 http://yourdomain/organize -> password protected area for editing the data. You can copy and paste all websites and all e-mail-contacts from the bottom of this page.
@@ -34,5 +40,5 @@ http://yourdomain/organize -> password protected area for editing the data. You 
 
 Maintenance
 --------------
-* Logos of entries have to be put to TEX manually
-* Use check_for_broken_links.sh from times to times. Unfortunately you check the information at least every year manually as adresses and contact data change quickly.
+* Logos of entries have to be copied to TEX manually
+* Use check_for_broken_links.sh from times to times. We suggest you check the information at least every year manually as adresses and contact data change quickly.
